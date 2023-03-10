@@ -16,6 +16,7 @@ mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
   useNewUrlParser: true,
 });
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // IMPORT YOUR API ROUTES HERE

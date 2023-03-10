@@ -1,0 +1,32 @@
+Experienced Trader
+For experienced traders, we provide a platform to quickly find trades. Our service allows you to streamline your trading experience and helps you stay ahead of the game.
+
+Novice Trader
+If you're a novice trader, we've got you covered too! We offer a glossary of trading terminology, complete with diagrams and phonetics to help you learn. We also provide a walk-through guide to help you navigate the platform.
+
+Pop-up Descriptions
+For new traders, we have included pop-up descriptions beside each feature to help you understand its purpose.
+
+Conferences and YouTube Pages
+We have a carousel that provides links to relevant conferences and YouTube pages to help you stay informed of the latest trends and strategies.
+
+Glossary investopedia.com
+Our glossary is an API that provides you with all the trading terms and definitions you need to know. The dictionary also includes diagrams and phonetics to help you understand the meaning and pronunciation of each term.
+
+Paper Trading Sites
+We have partnered with Metatrader5 to provide you with a paper trading platform. You can use this platform to practice and perfect your trading strategies without risking real money.
+
+(spontaneous idea)Python Trading Strategies
+We also offer a section where you can create your own trading strategies using Python.
+
+Colour Theme
+Our colour theme is dark blue and dark grey, giving you a sleek and professional trading experience.
+
+Accessibility
+We care about accessibility and have included a carousel pop-up page that allows you to adjust the font size, volume, and type. We have also included a CSS page that covers the entire screen with a certain colour for colour-blind users.
+
+API Calls
+Our platform includes API calls for crypto trading. You can also use API calls to mark off your to-do list once tasks are completed.
+
+Mongoose orm (object relational model), layer between interface and code, inorder to access
+from database need mongoose, matches data structure to code structure

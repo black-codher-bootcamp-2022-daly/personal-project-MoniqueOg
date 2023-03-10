@@ -36,3 +36,70 @@
     transform: rotate(360deg);
   }
 }
+
+#volume-widget {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+#volume-change {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#accessibility-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#accessibility-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#accessibility-options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#color-blind-1 {
+  background-color: rgba(255, 0, 0, 0.5); /* Red */
+}
+
+#color-blind-2 {
+  background-color: rgba(0, 255, 0, 0.5); /* Green */
+}
+
+#color-blind-3 {
+  background-color: rgba(0, 0, 255, 0.5); /* Blue */
+}

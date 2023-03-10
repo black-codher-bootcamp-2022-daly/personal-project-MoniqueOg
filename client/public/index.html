@@ -1,43 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/images/upfavicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../src/index.css" />
+  <title>Trading Guide</title>
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h5>Trading<span>Guide</span></h5>
+      </div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <ul>
+          <li><a href="#glossary">Glossary</a></li>
+        </ul>
+        <ul>
+        <li><a href="#charts">Market</a></li> <!-- Add charts -->
+      </ul>
+        <ul>
+          <li><a href="#crypto">Cryptocurrency</a></li>
+          <li><a href="btc">Bitcoin</a>
+            <div id="volume-widget">
+              <h3>Bitcoin Volume Change</h3>
+              <div id="volume-change"></div>
+            </div>
+          </li><!--add image-->
+          <li><a href="eth">Ethereum</a></li>
+          <li><a href="doge">Dogecoin</a></li>
+          <li><a href="xrp">Ripple</a></li>
+        </ul>
+          <li><a href="#community">Community</a></li> <!--add news articles here-->
+        </ul>
+        <ul>
+          <li><a href="#trading">Paper Trading</a></li>
+          <iframe src="https://trade.mql5.com/trade?demo_all_servers=1&amp;startup_mode=open_demo&amp;lang=en&amp;save_password=off" allowfullscreen="allowfullscreen" style="width: 100%; height: 100%; border: none;"></iframe>
+        </ul>
+      </ul>
+      <div class="bar">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+      </div>
+    </nav>
+  </header>
+  <div class="banner">
+    <div class="wrapper">
+      <div class="content">
+        <h2>Trade with Confidence:</h2>
+        <h3>
+          Let Our Trading Aid Guide You to Success!
+        </h3>
+
+        <p>
+          Trading Guide is a website that provides you with information about the stock market and the cryptocurrencies.
+          It also provides you with a trading bot that will help you make the right decisions when trading.
+        </p>
+
+        <!--add an api search engine-->
+        <input type="text" id="search" placeholder="Search for a stock" />
+        <button id="search-btn">Search</button>
+       <a href="#">Learn More</a>
+
+        <h5 class="socials">
+          <i class="fa fa-deckx"></i>
+          <i class="fa fa-github"><a href="https://github.com/MoniqueOg" target="_blank"></a></i>
+          <i class="fa fa-linkedin"><a href=""></a></i>
+        </h5>
+        <button id="accessibility-btn" aria-label="Accessibility options">Accessibility</button>
+
+  <div id="accessibility-overlay" aria-hidden="true">
+    <div id="accessibility-options">
+      <div class="color-option" id="color-blind-1"></div>
+      <div class="color-option" id="color-blind-2"></div>
+      <div class="color-option" id="color-blind-3"></div>
+    </div>
+  </div>
+  
+  <sub> Monique Ogunkeyede | Blackcodher Student</sub>
+  <script src="../src/index.js"></script>
+  <script src="/server/models/accessability.js"></script>
+  <script src="/server/models/charts.js"></script>
+  <script src="/server/models/glossary.js"></script>
+  <script src="/server/models/volume.js"></script>
+  <script src="/server/models/news.js"></script>
+</div>
+    </div>
+  </div>
+
+
+</body>
+
+
 </html>
