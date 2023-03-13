@@ -15,6 +15,8 @@ document.body.appendChild(header);
 
 const nav = document.createElement("nav");
 
+//return html in the javasccript file to render nav bar
+
 /*stockData.map(({ symbol, company }) => {
     const nav = document.createElement("nav");
     nav.setAttribute("class", "nav");

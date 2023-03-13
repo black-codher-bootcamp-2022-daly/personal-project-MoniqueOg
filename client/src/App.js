@@ -3,7 +3,7 @@ import "./App.css";
 //import {tradingGlossary} from "./components/glossary";
 
 // SERVICES THAT CALL OUR API ENDPOINTS
-import { getAllProfiles } from "./services/profileService";
+import { getAllProfiles } from "./services/tradingService";
 
 function App() {
   const [profiles, setProfiles] = useState(null);

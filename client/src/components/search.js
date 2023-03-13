@@ -1,4 +1,3 @@
-//search api for stock data from data.json
 import React from 'react';
 import stockData from '../data.json';
 import './index.css';
@@ -15,11 +14,6 @@ const Search = (props) => {
     event.preventDefault();
     const filteredData = stockData.filter((item) => item.symbol.toLowerCase().includes(term.toLowerCase()) || item.name.toLowerCase().includes(term.toLowerCase()) || item.exchange.toLowerCase().includes(term.toLowerCase()));
     setResults(filteredData);
-  };
-
-  const handleChange = (event) => {
-    event.preventDefault()
-    console.log(stockData)
   };
 
   return (
