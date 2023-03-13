@@ -1,3 +1,5 @@
+
+const Accessibility = () => {
 // Get the accessibility button and overlay elements
 const accessibilityBtn = document.getElementById("accessibility-btn");
 const accessibilityOverlay = document.getElementById("accessibility-overlay");
@@ -21,3 +23,14 @@ colorOptions.forEach((option) => {
         document.body.style.backgroundColor = option.style.backgroundColor;
     });
 });
+
+// Add a click event listener to each font option to change the page's font
+const fontOptions = document.querySelectorAll(".font-option");
+fontOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+        document.body.style.fontFamily = option.style.fontFamily;
+    });
+});
+};
+
+export default function Accessibility()

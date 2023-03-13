@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
+//import {tradingGlossary} from "./components/glossary";
 
 // SERVICES THAT CALL OUR API ENDPOINTS
 import { getAllProfiles } from "./services/profileService";

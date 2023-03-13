@@ -6,6 +6,7 @@ If you're a novice trader, we've got you covered too! We offer a glossary of tra
 
 Pop-up Descriptions
 For new traders, we have included pop-up descriptions beside each feature to help you understand its purpose.
+Hover over papertrade '0 risk, 100% experience with metatrader5'
 
 Conferences and YouTube Pages
 We have a carousel that provides links to relevant conferences and YouTube pages to help you stay informed of the latest trends and strategies.

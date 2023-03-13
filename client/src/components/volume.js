@@ -1,6 +1,6 @@
 // Get the current and previous volumes of Bitcoin
-const currentVolume = 0; // Replace with actual volume data
-const previousVolume = 0; // Replace with actual volume data
+const currentVolume = 10000; // Replace with actual volume data
+const previousVolume = 2800; // Replace with actual volume data
 
 // Calculate the volume change percentage
 const volumeChange = ((currentVolume - previousVolume) / previousVolume) * 100;
@@ -18,3 +18,4 @@ if (volumeChange > 0) {
 } else {
   volumeChangeElement.textContent = "No change";
 }
+
