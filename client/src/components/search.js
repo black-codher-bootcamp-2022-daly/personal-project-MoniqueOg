@@ -1,5 +1,5 @@
 import React from 'react';
-import stockData from '../data.json';
+import data from '../data.json';
 import './index.css';
  
 const { company, description, initial_price, price_2007, symbol } = stockData;

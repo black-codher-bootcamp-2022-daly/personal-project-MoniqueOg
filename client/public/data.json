@@ -8,6 +8,14 @@
         "symbol": "MMM"
     },
     {
+        "company": "Apple Inc.",
+        "description": "Apple Inc. is a technology company that designs, develops, and sells consumer electronics, computer software, and online services. Some of its most popular products include the iPhone, iPad, MacBook, and Apple Watch.",
+        "initial_price": 26.50,
+        "price_2002": 7.65,
+        "price_2007": 198.08,
+        "symbol": "AAPL"
+    },
+    {
         "company": "Amazon.com",
         "description": "Amazon.com, Inc. is an online retailer in North America and internationally. The company serves consumers through its retail Web sites and focuses on selection, price, and convenience. It also offers programs that enable sellers to sell their products on its Web sites, and their own branded Web sites. In addition, the company serves developer customers through Amazon Web Services, which provides access to technology infrastructure that developers can use to enable virtually various type of business. Further, it manufactures and sells the Kindle e-reader. Founded in 1994 and headquartered in Seattle, Washington.",
         "initial_price": 89.38,
@@ -70,6 +78,30 @@
         "price_2002": 22.1,
         "price_2007": 28.76,
         "symbol": "GIS"
+    },
+    {
+        "company": "Apple Inc.",
+        "description": "Apple Inc. is a technology company that designs, develops, and sells consumer electronics, computer software, and online services. Some of its most popular products include the iPhone, iPad, MacBook, and Apple Watch.",
+        "initial_price": 26.50,
+        "price_2002": 7.65,
+        "price_2007": 198.08,
+        "symbol": "AAPL"
+    },
+    {
+        "company": "Amazon.com Inc.",
+        "description": "Amazon.com Inc. is an online retailer that sells a wide variety of products, including books, electronics, clothing, and household items. The company also provides cloud computing and streaming services.",
+        "initial_price": 18.00,
+        "price_2002": 13.50,
+        "price_2007": 89.31,
+        "symbol": "AMZN"
+    },
+    {
+        "company": "Google LLC",
+        "description": "Google LLC is a technology company that specializes in internet-related services and products, including search engines, online advertising, cloud computing, and software. The company is also known for its popular web browser, Google Chrome.",
+        "initial_price": 85.00,
+        "price_2002": 118.84,
+        "price_2007": 353.02,
+        "symbol": "GOOGL"
     },
     {
         "company": "Hewlett Packard",

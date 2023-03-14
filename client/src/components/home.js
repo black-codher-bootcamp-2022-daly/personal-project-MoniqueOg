@@ -1,44 +1,64 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+ 
 
-const tradingGlossary = (props) => {
+const Banner = (props) => { 
+    return( <div class="banner">
+<div class="wrapper">
+  <div class="content">
+    <h2>Trade with Confidence:</h2>
+    <h3>
+      Let Our Trading Aid Guide You to Success!
+    </h3>
+
+    <p>
+      Trading Guide is a website that provides you with information about the stock market and the cryptocurrencies.
+      It also provides you with a trading bot that will help you make the right decisions when trading.
+    </p>
+
+    {/* <!--add an api search engine--> */}
+    <input type="text" id="search" placeholder="Search for a stock" />
+    <button id="search-btn">Search</button>
+
+    <h5 class="socials">
+      <i class="fa fa-deckx"></i>
+      <i class="fa fa-github" href="https://github.com/MoniqueOg" target="_blank"></i>
+      <i class="fa fa-linkedin"></i>
+    </h5>
+  </div>
+</div>
+</div>
+)};
+
+const Heading = (props) => {
     return (
-        <div className="header">
-            <h1>About</h1>
-            <div className="Nav">
-                <Link to="/"> Home </Link> |
-                <Link to="/glossary"> Glossary </Link> |
-                {/* <Link to="/volume" className="volumeLink"> Volume ({props.volumeLength})</Link> */}
-            </div>
-            <div className="page">Welcome to your Trading Aid Glossary.
-                <br />
-                <h2>Trading Glossary</h2>
-                <br />
-                <p>
-                    Bid Price: The highest price a buyer is willing to pay for a particular security or asset.
-                    <br />
-                    Ask Price: The lowest price a seller is willing to accept for a particular security or asset.
-                    <br />
-                    Spread: The difference between the bid price and the ask price of a security or asset.
-                    <br />
-                    Market Order: An order to buy or sell a security or asset at the best available price in the market.
-                    <br />
-                    Limit Order: An order to buy or sell a security or asset at a specified price or better.
-                    <br />
-                    Stop Order: An order to buy or sell a security or asset when its price reaches a specified level.
-                    <br />
-                    Position: The amount of a particular security or asset that a trader holds in their portfolio.
-                    <br />
-                    P&L: Profit and loss, the amount of profit or loss that a trader has realized from a particular trade or their overall portfolio.
-                    <br />
-                    Risk Management: The practice of identifying and managing potential risks associated with trading, such as market risk, credit risk, and operational risk.
-                    <br />
-                    Technical Analysis: The practice of analyzing past market data, such as price and volume, to identify trends and make trading decisions.
-                </p>
-            </div>
+        <nav>
+        <div class="logo">
+          <h5>Trading<span>Guide</span></h5>
         </div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <ul>
+            <li><a href="./trading-glossary">Glossary</a></li>
+          </ul>
+          <ul>
+            <li><a href="#charts">Market</a></li> <!-- Add charts -->
+          </ul>
+          <ul>
+            <li><a href="#stocks">Stocks</a></li> <!--add stocks here-->
+          </ul>
+          <li><a href="#community">Community</a></li> <!--add news articles here-->
+          <li><a href="./trading.html" target="_blank" class="tooltip">PaperTrading</a></li>
+  {/* ask if ul's are needed */}
+        </ul>
+        <div class="bar">
+          <div class="bar-1"></div>
+          <div class="bar-2"></div>
+          <div class="bar-3"></div>
+        </div>
+      </nav>
     )
 };
 
 
-export default tradingGlossary;
+export default Banner;

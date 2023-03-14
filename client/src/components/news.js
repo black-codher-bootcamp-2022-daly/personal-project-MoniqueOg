@@ -1,9 +1,35 @@
-//create search api for stock data 
 
-//Yahoo Finance API: This package provides JSON API for financial data, 
-//including stock quotes, historical data, and financial news.
-//It can be used to retrieve data for stocks, indices, currencies, and commodities.
+const fetch = require("node-fetch");
+const cheerio = require("cheerio");
 
-//https://www.npmjs.com/package/yahoo-finance-api
+const url = 'https://uk.finance.yahoo.com/topic/news/';
 
-//insert yahoo finance news here to search articles
+fetch(url)
+  .then(response => response.text())
+  .then(data => {
+    const $ = cheerio.load(data);
+
+    const title = $('h1.article-title').text().trim();
+
+    const author = $('div.article-author').text().trim();
+
+    const date = $('div.article-date').text().trim();
+
+    let content = '';
+    $('div.article-content p').each((i, el) => {
+      content += $(el).text().trim() + '\n';
+    });
+
+    const article = {
+        title: title,
+        author: author,
+        date: date,
+        content: content
+    };
+
+    console.log(article);
+  })
+  .catch(error => {
+    console.error('Error fetching news article:', error);
+  });
+

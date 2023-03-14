@@ -1,43 +1,46 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-//import {tradingGlossary} from "./components/glossary";
-
 // SERVICES THAT CALL OUR API ENDPOINTS
-import { getAllProfiles } from "./services/tradingService";
+
+//react client side
+//query database for terms in glossary to return to api  instead of hard coding 
+//retrieve query get the array of terms and definitions
+//mongo.db create a new collection node server query the database db.collections.find
+//then react client term api /client /api then to return the terms and definitions
+import React, { useState, useEffect } from 'react'
+import {setTradingGlossary} from "./services/tradingService";
+import './App.css';
 
 function App() {
-  const [profiles, setProfiles] = useState(null);
+  const [terms, setTradingGlossary] = useState([])
 
   useEffect(() => {
-    async function getProfiles() {
-      if (!profiles) {
-        const response = await getAllProfiles();
-        setProfiles(response);
+    async function getTerms() {
+      if (!terms) {
+        const response = await setTradingGlossary();
+        getTerms(response);
       }
     }
 
-    getProfiles();
-  }, [profiles]);
+    getTerms();
+  }, [terms]);
 
-  const renderProfile = (user) => {
-    return (
-      <li key={user._id}>
-        <h3>
-          {`${user.first_name} 
-          ${user.last_name}`}
-        </h3>
-        <p>{user.location}</p>
-      </li>
-    );
-  };
-
+return (
+    <div>
+<h1>Trading Glossary</h1>
+      {terms.map((term, index) => (
+        <div key={index}>
+          <h3>{term.term}</h3>
+          <p>{term.definition}</p>
+        </div>
+      ))}
+    </div>
+  )
   return (
     <div>
       <ul>
-        {profiles && profiles.length > 0 ? (
-          profiles.map((profile) => renderProfile(profile))
+        {terms && terms.length > 0 ? (
+          terms.map((tradingService) => rendertradingGlossaryModel(TradingGlossary))
         ) : (
-          <p>No profiles found</p>
+          <p>No definitions found</p>
         )}
       </ul>
     </div>
@@ -45,3 +48,28 @@ function App() {
 }
 
 export default App;
+
+// const TradingGlossary = () => {
+//   const [terms, setTerms] = useState([])
+
+//   useEffect(() => {
+//     fetch('/api/trading-glossary')
+//       .then(res => res.json())
+//       .then(data => setTerms(data))
+//       .catch(err => console.log(err))
+//   }, [])
+
+//   return (
+//     <div>
+//       <h1>Trading Glossary</h1>
+//       {terms.map((term, index) => (
+//         <div key={index}>
+//           <h3>{term.term}</h3>
+//           <p>{term.definition}</p>
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
+
+// export default TradingGlossary;
