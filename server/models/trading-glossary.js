@@ -14,9 +14,5 @@ const TradingGlossarySchema = new Schema({
 
 const TradingGlossaryModel = mongoose.model("glossary", TradingGlossarySchema);
 
-mongoose.connect('mongodb://localhost/trading-glossary', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
 module.exports = TradingGlossaryModel;

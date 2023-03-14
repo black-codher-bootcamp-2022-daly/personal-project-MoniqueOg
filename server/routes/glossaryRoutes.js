@@ -1,22 +1,22 @@
 const mongoose = require("mongoose");
 const Profile = mongoose.model("glossary");
 
-app.get('/api/trading-glossary', async (req, res) => {
-  try {
-    const tradingGlossary = await TradingGlossaryModel.find({});
-    res.json(tradingGlossary);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
 
 const profileRoutes = (app) => {
   app.get(`/api/profiles`, async (req, res) => {
     const profiles = await Profile.find();
 
     return res.status(200).send(profiles);
+  });
+
+  app.get('/api/trading-glossary', async (req, res) => {
+    try {
+      const tradingGlossary = await TradingGlossaryModel.find({});
+      res.json(tradingGlossary);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
   });
 
   app.post(`/api/profile`, async (req, res) => {
@@ -37,13 +37,6 @@ const profileRoutes = (app) => {
       error: false,
       profile,
     });
-  });
-
-  app.fetch('/api/glossary')
-  .then(res => res.json())
-  .then(data => {
-    const glossary = data.map(doc => `${doc.term}: ${doc.definition}`).join(', ');
-    console.log(glossary);
   });
 
   app.delete(`/api/profile/:id`, async (req, res) => {

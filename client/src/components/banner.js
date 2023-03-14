@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
  
 
 const Banner = (props) => { 
-    return( <div class="banner">
+    return( 
+    <div class="banner">
 <div class="wrapper">
   <div class="content">
     <h2>Trade with Confidence:</h2>

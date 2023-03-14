@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 // IMPORT YOUR SCHEMAS HERE
-import TradingGlossaryModel from "./models/trading-glossary"; 
+// import TradingGlossaryModel from "./models/trading-glossary"; 
 require("./models/trading-glossary"); //This is just an example. Don't forget to delete this
 
 const app = express();
