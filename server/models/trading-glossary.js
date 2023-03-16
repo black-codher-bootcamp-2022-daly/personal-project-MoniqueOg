@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const TradingGlossarySchema = new Schema({
+const TermsSchema = new Schema({
   term: {
     type: String,
     required: true,
@@ -12,7 +12,7 @@ const TradingGlossarySchema = new Schema({
   },
 });
 
-const TradingGlossaryModel = mongoose.model("glossary", TradingGlossarySchema);
+mongoose.model("terms", TermsSchema);
 
 
-module.exports = TradingGlossaryModel;
+// module.exports = TermsModel;

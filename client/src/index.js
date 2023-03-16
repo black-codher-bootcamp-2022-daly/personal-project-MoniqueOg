@@ -7,14 +7,6 @@ import App from './App';
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
-const menu = document.querySelector(".nav");
-
-const header = document.createElement("header");
-header.innerHTML = `Trading Aid`;
-document.body.appendChild(header);
-
-const nav = document.createElement("nav");
-
 //return html in the javasccript file to render nav bar
 
 /*stockData.map(({ symbol, company }) => {

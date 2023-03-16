@@ -1,8 +1,10 @@
 import React from 'react';
-import data from '../data.json';
+// import data from '../data.json';
 import './index.css';
  
-const { company, description, initial_price, price_2007, symbol } = stockData;
+//connect to external api to render info
+//wireframe for search results
+//new page for glossary + search results 
 const propTypes = {};
 const defaultProps = {};
 
