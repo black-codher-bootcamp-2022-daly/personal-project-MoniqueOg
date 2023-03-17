@@ -3,10 +3,10 @@ import React from "react";
 const Heading = (props) => {
     return (
         <nav>
-            <div class="logo">
+            <div className="logo">
                 <h5>Trading<span>Guide</span></h5>
             </div>
-            <ul class="menu">
+            <ul className="menu">
                 <li><a href="#home">Home</a></li>
                 <ul>
                     <li><a href="./trading-glossary">Glossary</a></li>
@@ -20,10 +20,10 @@ const Heading = (props) => {
                 <li><a href="#community">Community</a></li>
                 <li><a href="./trading.html" target="_blank" class="tooltip">PaperTrading</a></li>
             </ul>
-            <div class="bar">
-                <div class="bar-1"></div>
-                <div class="bar-2"></div>
-                <div class="bar-3"></div>
+            <div className="bar">
+                <div className="bar-1"></div>
+                <div className="bar-2"></div>
+                <div className="bar-3"></div>
             </div>
         </nav>
     )

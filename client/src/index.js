@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './App.css';
 import App from './App';
 //import stockData from '../data.json';
+
+
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
@@ -14,4 +16,6 @@ const root = ReactDOM.createRoot(container);
     nav.setAttribute("class", "nav");
 
 });*/
+
+
 root.render(<App />);
