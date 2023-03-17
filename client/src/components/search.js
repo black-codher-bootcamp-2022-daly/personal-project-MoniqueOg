@@ -1,6 +1,6 @@
 import React from 'react';
 import stockData from '../data.json';
-// import './App.css';
+
  
 //connect to external api to render info
 //wireframe for search results
