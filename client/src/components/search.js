@@ -1,6 +1,6 @@
 import React from 'react';
-// import data from '../data.json';
-import './App.css';
+import data from '../data.json';
+// import './App.css';
  
 //connect to external api to render info
 //wireframe for search results
@@ -11,7 +11,7 @@ const defaultProps = {};
 const Search = (props) => {
   const [term, setTerm] = React.useState('');
   const [results, setResults] = React.useState([]);
-
+  console.log(data);
   // const handleSubmit = (event) =>{
   //   event.preventDefault();
   //   const filteredData = stockData.filter((item) => item.symbol.toLowerCase().includes(term.toLowerCase()) || item.name.toLowerCase().includes(term.toLowerCase()) || item.exchange.toLowerCase().includes(term.toLowerCase()));
@@ -39,7 +39,7 @@ const Search = (props) => {
   //       </ul>
   //       : <h2>No Results Found</h2>}
   //   </div>
-  );
+  // );
 }
 
 Search.propTypes = propTypes;

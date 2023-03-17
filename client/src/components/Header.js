@@ -18,7 +18,7 @@ const Heading = (props) => {
                     <li><a href="#stocks">Stocks</a></li>
                 </ul>
                 <li><a href="#community">Community</a></li>
-                <li><a href="./trading.html" target="_blank" class="tooltip">PaperTrading</a></li>
+                <li><a href="./trading.html" target="_blank" className="tooltip">PaperTrading</a></li>
             </ul>
             <div className="bar">
                 <div className="bar-1"></div>

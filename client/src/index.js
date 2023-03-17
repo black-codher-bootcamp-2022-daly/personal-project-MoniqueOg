@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(container);
 
 /*stockData.map(({ symbol, company }) => {
     const nav = document.createElement("nav");
-    nav.setAttribute("class", "nav");
+    nav.setAttribute("className", "nav");
 
 });*/
 

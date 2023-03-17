@@ -26,7 +26,7 @@ const Content = (props) => {
         <button type="submit" id="search-btn" >Search</button>
         </form>
 
-        <h5 classNames="socials">
+        <h5 className="socials">
             <i className="fa fa-deckx"></i>
             <i className="fa fa-github" href="https://github.com/MoniqueOg" target="_blank"></i>
             <i className="fa fa-linkedin"></i>
