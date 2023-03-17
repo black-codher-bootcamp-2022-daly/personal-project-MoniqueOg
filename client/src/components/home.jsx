@@ -3,7 +3,6 @@ import { setTradingGlossary } from "../services/tradingService";
 import Wrapper from '../components/Wrapper';
 import Content from '../components/Content1';
 import Heading from '../components/Header';
-import Search from './search';
 import '../App.css'
 
 const Home = () => {
@@ -24,7 +23,6 @@ const Home = () => {
     return (
         <div>
         <Heading></Heading>
-        <Search></Search>
         <Wrapper> 
           <Content> </Content>
         </Wrapper>
