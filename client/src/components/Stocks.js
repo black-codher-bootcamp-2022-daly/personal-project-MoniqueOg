@@ -1,18 +1,21 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
+
+import { useSearchParams } from 'react-router-dom';
 import stockData from '../data.json';
-// import Search from './Search';
 
-
-//utilise useEffect
 
 function Stocks() {
-    const [term] = React.useState('');
-    const [results, setResults] = React.useState(stockData);
-    const filteredData = stockData;//.filter((item) => item.symbol.toLowerCase().includes(term.toLowerCase()) || item.name.toLowerCase().includes(term.toLowerCase()) || item.exchange.toLowerCase().includes(term.toLowerCase()));
-    // setResults(filteredData);
-  
+    const [searchParams] = useSearchParams();
+    const [results, setResults] = useState([]);
+
+    useEffect(() => {
+        const term = searchParams.get('search');
+        const filteredData = stockData.filter((item) => item.symbol.toLowerCase().includes(term.toLowerCase()) || item.company.toLowerCase().includes(term.toLowerCase()));
+        setResults(filteredData);
+    }, [searchParams]);
+
     return (<div className='results'>
-        { results.length > 0 ?
+        {results.length > 0 ?
             <ul>
                 {results.map((item) => (
                     <li key={item.symbol}>
@@ -24,7 +27,7 @@ function Stocks() {
                 ))}
             </ul>
             : <h2>No Results Found</h2>}
- </div>);
+    </div>);
 };
 
 export default Stocks;
