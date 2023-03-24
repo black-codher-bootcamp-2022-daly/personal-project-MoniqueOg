@@ -1,17 +1,25 @@
+#Project Page 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5685b0fa-e30e-49cb-bf86-17d905a1e40c/deploy-status)](https://app.netlify.com/sites/trading-aid/deploys)
+
+## Project URL
+https://trading-aid.netlify.app/
+
 # MERN Stack Project
 
 Here's some boilerplate code with the initial setup for your project.
 
 The expectation with this code is that you're able to clone the repository and get started building your own fullstack ([MERN](https://www.mongodb.com/mern-stack)) application.
 
-- [Project Structure](#project-structure)
-  - [Client](#client)
-  - [Server](#server)
-- [Getting Started](#getting-started)
-  - [Populating The Database](#populating-the-database)
-  - [Starting The Development Server](#starting-the-development-server)
-  - [Example Application](#example-application)
-- [What's Next?!](#whats-next)
+- [MERN Stack Project](#mern-stack-project)
+  - [Project Structure](#project-structure)
+    - [Client](#client)
+    - [Server](#server)
+  - [Getting Started](#getting-started)
+    - [Environment variables](#environment-variables)
+    - [Populating The Database](#populating-the-database)
+    - [Starting The Development Server](#starting-the-development-server)
+    - [Example Application](#example-application)
+  - [What's Next?!](#whats-next)
 
 ## Project Structure
 

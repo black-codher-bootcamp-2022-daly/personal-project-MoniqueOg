@@ -2,20 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './App';
-//import stockData from '../data.json';
-
 
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
-
-//return html in the javasccript file to render nav bar
-
-/*stockData.map(({ symbol, company }) => {
-    const nav = document.createElement("nav");
-    nav.setAttribute("className", "nav");
-
-});*/
 
 
 root.render(<App />);
