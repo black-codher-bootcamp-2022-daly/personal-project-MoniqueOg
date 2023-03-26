@@ -21,47 +21,54 @@ const glossaryRoutes = (app, db) => {
     return res.status(200).send(terms);
   });
 
+/**
+ * Middleware handler for GET requests to /api/profile/:id path
+ */
+  app.get('/api/trading-glossary/:id', async (req, res) => {
+    const termId = req.params.id;
+    const term = await glossaryCollection.findOne({ _id: mongodb.ObjectId(termId) });
+    if (!term) {
+      return res.status(404).send('Term not found');
+    }
+    return res.status(200).send(term);
+  });
+
   /**
    * Middleware handler for POST requests to /api/profile path
    */
-  app.post(`/api/profile`, async (req, res) => {
-    const profile = await glossaryCollection().insertOne(req.body);
-
-    return res.status(201).send({
-      error: false,
-      profile,
-    });
+  app.post('/api/trading-glossary', async (req, res) => {
+    const newTerm = req.body;
+    const result = await glossaryCollection.insertOne(newTerm);
+    return res.status(201).send(result.ops[0]);
   });
 
   /**
    * Middleware handler for PUT requests to /api/profile/:id path
    */
-  app.put(`/api/profile/:id`, async (req, res) => {
-    // Captures target id from URL
-    const { id } = req.params;
-    // Builds query matching `_id` field value matching captured id. `ObjectId()` is needed to convert string value to correct type
-    const query = { _id: new ObjectId(id) };
-    const profile = await glossaryCollection().replaceOne(query, req.body);
-
-    return res.status(202).send({
-      error: false,
-      profile,
-    });
+  app.put('/api/trading-glossary/:id', async (req, res) => {
+    const termId = req.params.id;
+    const updatedTerm = req.body;
+    const result = await glossaryCollection.updateOne(
+      { _id: mongodb.ObjectId(termId) },
+      { $set: updatedTerm }
+    );
+    if (result.modifiedCount === 0) {
+      return res.status(404).send('Term not found');
+    }
+    return res.status(200).send('Term updated successfully');
   });
 
   /**
    * Middleware handler for DELETE requests to /api/profile/:id path
    */
-  app.delete(`/api/profile/:id`, async (req, res) => {
-    const { id } = req.params;
-    const query = { _id: new ObjectId(id) };
-    const profile = await glossaryCollection().deleteOne(query);
-
-    return res.status(202).send({
-      error: false,
-      profile,
-    });
+  app.delete('/api/trading-glossary/:id', async (req, res) => {
+    const termId = req.params.id;
+    const result = await glossaryCollection.deleteOne({ _id: mongodb.ObjectId(termId) });
+    if (result.deletedCount === 0) {
+      return res.status(404).send('Term not found');
+    }
+    return res.status(200).send('Term deleted successfully');
   });
-};
+}
 
 module.exports = glossaryRoutes;
