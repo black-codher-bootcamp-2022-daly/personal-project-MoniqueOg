@@ -6,7 +6,7 @@ const Articles = () => {
       <h1>The Importance of Investing Early</h1>
       <h2>How Starting Young Can Make a Big Difference</h2>
       <div className='img-container'>
-        <img src='https://picsum.photos/400/200' alt='Stock market chart' />
+        <img src='https://thumbor.forbes.com/thumbor/fit-in/00x500/https://www.forbes.com/advisor/wp-content/uploads/2021/09/how-to-make-money-in-stocks.jpg' alt='Stock market chart' />
         <p>Photo by John Smith</p>
       </div>
       <p>

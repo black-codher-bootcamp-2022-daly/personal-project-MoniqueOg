@@ -10,7 +10,7 @@ const Content = (props) => {
             </h3>
 
             <p>
-                Trading Guide is a website that provides you with information about the stock market and the cryptocurrencies.
+                Trading Aid is a site that provides you with information about the stock market data and definitions .
                 It also provides you with a trading bot that will help you make the right decisions when trading.
             </p>
 
@@ -21,6 +21,7 @@ const Content = (props) => {
                 <i className="fa fa-github" href="https://github.com/MoniqueOg" target="_blank"></i>
                 <i className="fa fa-linkedin"></i>
             </h5>
+            <p>Monique Ogunkeyede | Blackcodher Student</p>
         </div>)
 };
 

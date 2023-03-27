@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Heading from './components/Header';
 import Glossary from './components/Glossary';
 import Home from './components/Home';
-import Stocks from './components/Stocks';
 import TradingViewWidget from './components/Chart';
 import Articles from './components/Articles';
+import Stocks from './components/Stocks';
+import About from './components/About';
 import Accessibility from './components/Accessability';
-import './App.css';
 
 function App() {
   return (
@@ -19,24 +19,35 @@ function App() {
           <Route path="/trading-glossary" element={
             <>
               <Heading />
-              <Glossary></Glossary>
               <Accessibility></Accessibility>
+              <Glossary></Glossary>
+
             </>} />
-            <Route path="/charts" element={
+          <Route path="/charts" element={
+            <>
+              <Heading /><div style={{ height: "650px" }}>
+                <TradingViewWidget></TradingViewWidget>
+              </div>
+            </>} />
+            <Route path="/stocks" element={
             <>
               <Heading />
-              <TradingViewWidget></TradingViewWidget>
-            </>} />
-          <Route path="/stocks" element={
-            <>
-              <Heading />
-              <Stocks></Stocks>
+               <Stocks></Stocks> 
+              <Accessibility></Accessibility>
             </>} />
           <Route path="/articles" element={
             <>
               <Heading />
-              <Articles></Articles>
               <Accessibility></Accessibility>
+              <Articles></Articles>
+
+            </>} />
+            <Route path="/about" element={
+            <>
+              <Heading />
+              <Accessibility></Accessibility>
+              <About></About>
+
             </>} />
         </Routes>
       </div>

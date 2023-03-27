@@ -26,7 +26,7 @@ const glossaryRoutes = (app, db) => {
  */
   app.get('/api/trading-glossary/:id', async (req, res) => {
     const termId = req.params.id;
-    const term = await glossaryCollection.findOne({ _id: mongodb.ObjectId(termId) });
+    const term = await glossaryCollection().find({ _id: new ObjectId(termId) });
     if (!term) {
       return res.status(404).send('Term not found');
     }
@@ -38,7 +38,7 @@ const glossaryRoutes = (app, db) => {
    */
   app.post('/api/trading-glossary', async (req, res) => {
     const newTerm = req.body;
-    const result = await glossaryCollection.insertOne(newTerm);
+    const result = await glossaryCollection().insert(newTerm);
     return res.status(201).send(result.ops[0]);
   });
 
@@ -48,8 +48,8 @@ const glossaryRoutes = (app, db) => {
   app.put('/api/trading-glossary/:id', async (req, res) => {
     const termId = req.params.id;
     const updatedTerm = req.body;
-    const result = await glossaryCollection.updateOne(
-      { _id: mongodb.ObjectId(termId) },
+    const result = await glossaryCollection().update(
+      { _id: new ObjectId(termId) },
       { $set: updatedTerm }
     );
     if (result.modifiedCount === 0) {
@@ -63,7 +63,7 @@ const glossaryRoutes = (app, db) => {
    */
   app.delete('/api/trading-glossary/:id', async (req, res) => {
     const termId = req.params.id;
-    const result = await glossaryCollection.deleteOne({ _id: mongodb.ObjectId(termId) });
+    const result = await glossaryCollection().deleteOne({ _id: new ObjectId(termId) });
     if (result.deletedCount === 0) {
       return res.status(404).send('Term not found');
     }

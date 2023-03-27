@@ -9,24 +9,30 @@ function Stocks() {
 
     useEffect(() => {
         const term = searchParams.get('search');
-        const filteredData = stockData.filter((item) => item.symbol.toLowerCase().includes(term.toLowerCase()) || item.company.toLowerCase().includes(term.toLowerCase()));
-        setResults(filteredData);
-    }, [searchParams]);
+        if (term != null) {
+          console.log(term);
+          const filteredData = stockData.filter((item) => item.company.toLowerCase().includes(term.toLowerCase()));
+          setResults(filteredData);
+          console.log(filteredData);
+        } else {
+          setResults(stockData);
+        }
+      }, [searchParams]);
 
-    return (<div className='results'>
-        {results.length > 0 ?
+
+    return (
+        <div>
+            <h1>Search Results</h1>
             <ul>
                 {results.map((item) => (
                     <li key={item.symbol}>
                         <h2>{item.company}</h2>
                         <p>{item.description}</p>
-                        <p>{item.initial_price}</p>
-                        <p>{item.price_2007}</p>
                     </li>
                 ))}
             </ul>
-            : <h2>No Results Found</h2>}
-    </div>);
-};
+        </div>
+    );
+}
 
 export default Stocks;

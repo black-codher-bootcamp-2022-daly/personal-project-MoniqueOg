@@ -80,14 +80,6 @@
         "symbol": "GIS"
     },
     {
-        "company": "Apple Inc.",
-        "description": "Apple Inc. is a technology company that designs, develops, and sells consumer electronics, computer software, and online services. Some of its most popular products include the iPhone, iPad, MacBook, and Apple Watch.",
-        "initial_price": 26.50,
-        "price_2002": 7.65,
-        "price_2007": 198.08,
-        "symbol": "AAPL"
-    },
-    {
         "company": "Amazon.com Inc.",
         "description": "Amazon.com Inc. is an online retailer that sells a wide variety of products, including books, electronics, clothing, and household items. The company also provides cloud computing and streaming services.",
         "initial_price": 18.00,
