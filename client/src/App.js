@@ -8,9 +8,10 @@ import Articles from './components/Articles';
 import Stocks from './components/Stocks';
 import About from './components/About';
 import Accessibility from './components/Accessability';
+import Footer from './components/Footer';
 
 function App() {
-  return (
+  return (<>
     <Router>
       <div>
         <Routes>
@@ -29,11 +30,12 @@ function App() {
                 <TradingViewWidget></TradingViewWidget>
               </div>
             </>} />
-            <Route path="/stocks" element={
+          <Route path="/stocks" element={
             <>
               <Heading />
-               <Stocks></Stocks> 
               <Accessibility></Accessibility>
+              <Stocks></Stocks>
+
             </>} />
           <Route path="/articles" element={
             <>
@@ -42,7 +44,7 @@ function App() {
               <Articles></Articles>
 
             </>} />
-            <Route path="/about" element={
+          <Route path="/about" element={
             <>
               <Heading />
               <Accessibility></Accessibility>
@@ -52,6 +54,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+    <Footer></Footer>
+  </>
   );
 }
 
