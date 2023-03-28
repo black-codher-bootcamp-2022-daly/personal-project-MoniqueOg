@@ -15,13 +15,11 @@ const Glossary = () => {
 
     getTerms();
   }, [terms]);
-
   return (
-
     <div>
       <h1>Trading Glossary</h1>
       {terms && terms.length > 0 ? (terms.map((term, index) => (
-        <div key={index}>
+        <div key={index} style={{ padding: "10px" }}>
           <h3>{term.term}</h3>
           <p>{term.definition}</p>
         </div>
