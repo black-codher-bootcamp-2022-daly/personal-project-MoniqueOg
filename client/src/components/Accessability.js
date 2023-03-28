@@ -4,17 +4,18 @@ function Accessibility() {
   const accessibilityBtn = React.useRef(null);
   const accessibilityOverlay = React.useRef(null);
 
-  React.useEffect(() => {
-    const handleOverlay = () => {
-      if (accessibilityOverlay.current.getAttribute("aria-hidden") === "true") {
-        accessibilityOverlay.current.style.display = "flex";
-        accessibilityOverlay.current.setAttribute("aria-hidden", "false");
-      } else {
-        accessibilityOverlay.current.style.display = "none";
-        accessibilityOverlay.current.setAttribute("aria-hidden", "true");
-      }
-    };
+  const handleOverlay = () => {
+    console.log(accessibilityOverlay.current.style.display)
+    if (accessibilityOverlay.current.getAttribute("aria-hidden") === "true") {
+      accessibilityOverlay.current.style.display = "flex";
+      accessibilityOverlay.current.setAttribute("aria-hidden", "false");
+    } else {
+      accessibilityOverlay.current.style.display = "none";
+      accessibilityOverlay.current.setAttribute("aria-hidden", "true");
+    }
+  };
 
+  React.useEffect(() => {
     const colorOptions = document.querySelectorAll(".color-option");
     colorOptions.forEach((option) => {
       option.addEventListener("click", () => {
@@ -29,16 +30,12 @@ function Accessibility() {
       });
     });
 
-    accessibilityBtn.current.addEventListener("click", handleOverlay);
-
-    return () => {
-      accessibilityBtn.current.removeEventListener("click", handleOverlay);
-    };
+    // accessibilityBtn.current.addEventListener("click", handleOverlay);
   }, []);
 
   return (
     <div>
-      <button ref={accessibilityBtn} onClick={"handleOverlay"} id="accessibility-btn" aria-label="Accessibility options">
+      <button ref={accessibilityBtn} onClick={handleOverlay} id="accessibility-btn" aria-label="Accessibility options">
         Accessibility
       </button>
 
@@ -56,6 +53,7 @@ function Accessibility() {
           display: "none",
           justifyContent: "center",
           alignItems: "center",
+          textAlign: "center",
         }}
       >
         <div id="accessibility-options" style={{ backgroundColor: "#fff", padding: "1rem", borderRadius: "5px", boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)", maxWidth: "90%", maxHeight: "90%", overflow: "auto" }}>
@@ -72,7 +70,7 @@ function Accessibility() {
             <div className="font-option" style={{ fontFamily: "serif" }}>Serif</div>
             <div className="font-option" style={{ fontFamily: "monospace" }}>Monospace</div>
           </div>
-          <button style={{ marginTop: "1rem" }} onClick={() => accessibilityOverlay.current.style.display = "none"}>Close</button>
+          <button className="close-button" style={{ marginTop: "1rem" }} onClick={() => accessibilityOverlay.current.style.display = "none"}>Close</button>
         </div>
       </div>
     </div>

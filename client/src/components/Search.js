@@ -21,7 +21,7 @@ const Search = (props) => {
         <label>
           <input type="text" placeholder="Enter token or company..." id="search" name="search" value={term} onChange={(e) => setTerm(e.target.value)} />
         </label>
-        <button type="submit" id="search-btn" >Search</button>
+        <button type="submit" className="close-button" >Search</button>
       </form>
 
     </div>
