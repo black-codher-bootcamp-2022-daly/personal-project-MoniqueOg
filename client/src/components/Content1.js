@@ -1,5 +1,6 @@
-import '../App.css';
+import React from 'react';
 import Search from './Search.js';
+import Accessibility from './Accessability';
 
 const Content = (props) => {
     return (
@@ -13,15 +14,13 @@ const Content = (props) => {
                 Trading Aid is a site that provides you with information about the stock market data and definitions .
                 It also provides you with a trading bot that will help you make the right decisions when trading.
             </p>
-
+            <br />
             <Search></Search>
-
-            <h5 className="socials">
-                <i className="fa fa-deckx"></i>
-                <i className="fa fa-github" href="https://github.com/MoniqueOg" target="_blank"></i>
-                <i className="fa fa-linkedin"></i>
-            </h5>
+            {/*add socials here*/}
+            <br />
             <p>Monique Ogunkeyede | Blackcodher Student</p>
+            <br />
+            <Accessibility></Accessibility>
         </div>)
 };
 

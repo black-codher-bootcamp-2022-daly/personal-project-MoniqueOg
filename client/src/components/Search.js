@@ -19,7 +19,7 @@ const Search = (props) => {
     <div>
       <form id="searchAPI" onSubmit={handleSubmit}>
         <label>
-          <input type="text" placeholder="Enter symbol, company name, or exchange..." id="search" name="search" value={term} onChange={(e) => setTerm(e.target.value)} />
+          <input type="text" placeholder="Enter token or company..." id="search" name="search" value={term} onChange={(e) => setTerm(e.target.value)} />
         </label>
         <button type="submit" id="search-btn" >Search</button>
       </form>

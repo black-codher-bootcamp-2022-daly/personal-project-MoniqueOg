@@ -80,14 +80,6 @@
         "symbol": "GIS"
     },
     {
-        "company": "Amazon.com Inc.",
-        "description": "Amazon.com Inc. is an online retailer that sells a wide variety of products, including books, electronics, clothing, and household items. The company also provides cloud computing and streaming services.",
-        "initial_price": 18.00,
-        "price_2002": 13.50,
-        "price_2007": 89.31,
-        "symbol": "AMZN"
-    },
-    {
         "company": "Google LLC",
         "description": "Google LLC is a technology company that specializes in internet-related services and products, including search engines, online advertising, cloud computing, and software. The company is also known for its popular web browser, Google Chrome.",
         "initial_price": 85.00,
