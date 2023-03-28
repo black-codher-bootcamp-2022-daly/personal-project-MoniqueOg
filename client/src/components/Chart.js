@@ -56,7 +56,7 @@ export default function TradingViewWidget() {
     <div className="tradingview-widget-container" style={{height: "1000px"}}>
       <div id="technical-analysis-chart-demo" />
       <div className="tradingview-widget-copyright">
-        <a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank">
+        <a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener noreferrer" target="_blank">
           <span className="blue-text">AAPL stock chart</span>
         </a>
         by TradingAid
