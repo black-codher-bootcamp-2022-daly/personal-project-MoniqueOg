@@ -30,7 +30,6 @@ function Accessibility() {
       });
     });
 
-    // accessibilityBtn.current.addEventListener("click", handleOverlay);
   }, []);
 
   return (
