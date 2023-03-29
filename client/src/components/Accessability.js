@@ -56,19 +56,60 @@ function Accessibility() {
           textAlign: "center",
         }}
       >
-        <div id="accessibility-options" style={{ backgroundColor: "#fff", padding: "1rem", borderRadius: "5px", boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)", maxWidth: "90%", maxHeight: "90%", overflow: "auto" }}>
+        <div id="accessibility-options" style={{ backgroundColor: "#fff", padding: "1rem", borderRadius: "8px", boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)", maxWidth: "90%", maxHeight: "90%", overflow: "auto" }}>
           <div>
-            <h2 className='header-options' style={{color: "black" }}>Color options:</h2>
-            <div className="color-option" id="color-blind-1" style={{ backgroundColor: "red" }}>Red</div>
-            <div className="color-option" id="color-blind-2" style={{ backgroundColor: "green" }}>Green</div>
-            <div className="color-option" id="color-blind-3" style={{ backgroundColor: "blue" }}>Blue</div>
-            <div className="color-option" id="color-blind-4" style={{ backgroundColor: "yellow" }}>Yellow</div>
+            <h2 className='header-options' style={{ color: "black" }}>Color options:</h2>
+
+            <div className="radio-container">
+              <form>
+
+                <label>
+                  <input className="color-option" id="color-blind-1" style={{ backgroundColor: "red" }} type="radio" name="radio" defaultChecked />
+                  <span>Red</span>
+                </label>
+
+                <label>
+                  <input className="color-option" id="color-blind-2" style={{ backgroundColor: "green" }} type="radio" name="radio" />
+                  <span>Green</span>
+                </label>
+
+                <label>
+                  <input className="color-option" id="color-blind-3" style={{ backgroundColor: "blue" }} type="radio" name="radio" />
+                  <span>Blue</span>
+                </label>
+
+                <label>
+                  <input className="color-option" id="color-blind-3" style={{ backgroundColor: "yellow" }} type="radio" name="radio" />
+                  <span>Yellow</span>
+                </label>
+
+              </form>
+            </div>
+
           </div>
           <div style={{ marginTop: "1rem" }}>
-            <h2 style={{color: "black" }}>Font options:</h2>
-            <div className="font-option" style={{ fontFamily: "sans-serif" }}>Sans-serif</div>
-            <div className="font-option" style={{ fontFamily: "serif" }}>Serif</div>
-            <div className="font-option" style={{ fontFamily: "monospace" }}>Monospace</div>
+            <h2 style={{ color: "black" }}>Font options:</h2>
+
+            <div className="radio-container">
+              <form>
+
+                <label>
+                  <input className="font-option" style={{ fontFamily: "sans-serif" }} type="radio" name="radio" defaultChecked />
+                  <span>Sans-serif</span>
+                </label>
+
+                <label>
+                  <input className="font-option" style={{ fontFamily: "serif" }} type="radio" name="radio" />
+                  <span>Serif</span>
+                </label>
+
+                <label>
+                  <input className="font-option" style={{ fontFamily: "monospace" }} type="radio" name="radio" />
+                  <span>Monospace</span>
+                </label>
+
+              </form>
+            </div>
           </div>
           <button className="close-button" style={{ marginTop: "1rem" }} onClick={() => accessibilityOverlay.current.style.display = "none"}>Close</button>
         </div>
