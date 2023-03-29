@@ -13,6 +13,3 @@ const TermsSchema = new Schema({
 });
 
 mongoose.model("terms", TermsSchema);
-
-
-// module.exports = TermsModel;
