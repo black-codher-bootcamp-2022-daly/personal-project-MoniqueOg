@@ -15,14 +15,14 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route exact path="/" element={<><Home />   <Footer />  </>} />
-          <Route exact path="/home" element={<><Home />   <Footer /> </>} />
+          <Route exact path="/" element={<><Home />   </>} />
+          <Route exact path="/home" element={<><Home />    </>} />
           <Route path="/trading-glossary" element={
             <>
               <Heading />
               <Accessibility></Accessibility>
               <Glossary></Glossary>
-              <Footer />
+              
             </>} />
           <Route path="/charts" element={
             <>
@@ -35,14 +35,13 @@ function App() {
               <Heading />
               <Accessibility></Accessibility>
               <Stocks></Stocks>
-              {/* <Footer/> */}
             </>} />
           <Route path="/articles" element={
             <>
               <Heading />
               <Accessibility></Accessibility>
               <Articles></Articles>
-              <Footer />
+              
             </>} />
           <Route path="/about" element={
             <>
@@ -54,6 +53,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    <Footer/>
   </>
   );
 }
