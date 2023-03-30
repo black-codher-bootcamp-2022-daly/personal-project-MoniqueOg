@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const setTradingGlossary = async () => {
-  const response = await axios.get(`/api/trading-glossary`);
+  const response = await axios.get(`http://localhost:8080/api/trading-glossary`);
 
   return response.data || [];
 };
