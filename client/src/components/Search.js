@@ -13,6 +13,7 @@ const Search = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate(`/stocks?search=${term}`)
+    console.log(term)
   };
 
   return (

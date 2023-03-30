@@ -16,7 +16,8 @@ const Content = (props) => {
             </p>
             <br />
             <Search></Search>
-            {/*add socials here*/}
+            <a href='https://github.com/MoniqueOg' target="_blank" rel="noreferrer"><i class="fa-brands fa-github-alt fa-2xl"></i></a>
+            <a href='https://www.linkedin.com/in/monique-o-7538b41b8/' target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in fa-2xl"></i></a>
             <br />
             <p>Monique Ogunkeyede | Blackcodher Student</p>
             <br />
