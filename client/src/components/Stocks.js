@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import stockData from '../data.json';
+import apiData from '../api.json';
 
 function Stocks() {
     const location = useLocation();
@@ -12,24 +13,18 @@ function Stocks() {
         if (term != null) {
             const filteredData = stockData.filter((item) =>
                 item.company.toLowerCase().includes(term.toLowerCase())
-            );          
-            //collect symbols from filtered data utilizing a map ending up with an array of strings
-            //make a request to the market stack api(retrieving data from api)
-            //merge live data with filtered data
-            const symbols = filteredData.map((item) => item.symbol);
-            const symbolString = symbols.join(','); console.log(symbolString);
-            const url = `http://api.marketstack.com/v1/eod?access_key=d92d6bf719499bc80eff87d14dd277f8&symbols=${symbolString}`;
-            fetch(url)
-                .then((response) => response.json())
-                .then((data) => {
-                    const updatedData = filteredData.map((item) => {
-                        const latestPrice = data.data.find((stock) => stock.symbol === item.symbol).close;
-                        return { ...item, latestPrice };
-                    });
-                    setResults(updatedData);
-                });
+            );
+
+            const updatedData = filteredData.map((item) => {
+                const apiItem = apiData.data.find((data) => data.symbol === item.symbol);
+                const latestPrice = apiItem ? apiItem.close : '';
+                return { ...item, latestPrice };
+            });
+            console.log(apiData)
+
+            setResults(updatedData);
         } else {
-            setResults(stockData);     
+            setResults(stockData);
         }
     }, [location.search]);
 
@@ -39,7 +34,9 @@ function Stocks() {
             <ul style={{ padding: '50px' }}>
                 {results.map((item) => (
                     <li key={item.symbol}>
-                        <h2>{item.company}   |   {item.symbol} </h2>
+                        <h2>
+                            {item.company} | {item.symbol}
+                        </h2>
                         <p>Latest Price: {item.latestPrice}</p>
                         <p>{item.description}</p>
                         <br />
