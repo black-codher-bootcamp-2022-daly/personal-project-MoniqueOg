@@ -19,7 +19,7 @@ function Stocks() {
                 const apiItem = apiData.data.find((data) => {
                     console.log(data.symbol, item.symbol);
                     return data.symbol === item.symbol
-                }); console.log(apiItem);
+                }); 
                 const latestPrice = apiItem ? apiItem.close : '';
                 return { ...item, latestPrice };
             });
